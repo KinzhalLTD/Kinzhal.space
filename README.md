@@ -1,18 +1,19 @@
-# Kinzhal.space
+# kinzhal.space — one website for every Kinzhal game (Netlify)
 
-One repository for everything Kinzhal LTD runs on the web.
+Each game gets `/slug/`, `/slug/privacy/`, `/slug/terms/`, `/slug/support/` (English + Arabic).
+The root serves the studio home page and the one shared `app-ads.txt` that AdMob reads for all games.
 
-| Folder | What it is | Netlify site | Base directory |
-|---|---|---|---|
-| `nest/` | **Kinzhal Nest**: the games HQ (login, team, live data, marketing, products, Steam) | kinzhalnest.netlify.app | `nest` |
-| `site/` | **kinzhal.space**: the studio website, with a page, privacy, terms and support for every game, plus one shared `app-ads.txt` | kinzhal.space | `site` |
+- `games.json` — the list of games (add a game here; edit it right on GitHub).
+- `site.json` — company, contact email and the **app-ads.txt lines**.
+- `assets.mjs` — logo, icons and share image (built into the site; an optional `static/` folder can override them).
+- `build.mjs` — builds `public/` (not stored on GitHub). Netlify runs it on every push (`netlify.toml`).
+- `check.mjs` — `node check.mjs` checks every URL on the live domain.
+- `GAME_PROMPTS.md` — one prompt per game project to switch its links to kinzhal.space.
+- `public/urls.txt` — every game's four URLs for App Store Connect.
 
-Each folder keeps its own `netlify.toml`, `package.json` and README, so each Netlify site builds only its own folder.
-
-## Netlify settings (per site)
-Site configuration → Build & deploy → Continuous deployment → Repository: `KinzhalLTD/Kinzhal.space`, branch `main`.
-
-- **Kinzhal Nest:** Base directory `nest` · Publish directory `nest/public` · Functions directory `nest/netlify/functions`
-- **kinzhal.space:** Base directory `site` · Build command `node build.mjs` · Publish directory `site/public`
-
-Secrets stay in Netlify environment variables and in the Kinzhal Nest settings screen. They never go in this repo.
+## Publish on Netlify
+1. Put this folder in a GitHub repository (e.g. `KinzhalLTD/kinzhal-site`).
+2. Netlify → Add new site → Import an existing project → GitHub → pick the repo. Build settings come from `netlify.toml`.
+3. Domain management → Add a domain → `kinzhal.space` (Netlify adds `www` too).
+4. DNS at your registrar: `@` → ALIAS/ANAME `apex-loadbalancer.netlify.com` (or A `75.2.60.5`), and `www` → CNAME `<your-site>.netlify.app`. Or switch the domain's nameservers to Netlify DNS.
+5. HTTPS is issued automatically once DNS resolves.

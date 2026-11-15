@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /about.html
-Allow: /privacy.html
-Allow: /og-image.jpg
-Disallow: /api/
-
-Sitemap: https://kinzhalnest.netlify.app/sitemap.xml
