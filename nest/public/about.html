@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kinzhal Nest · Games HQ by Kinzhal LTD Co.</title>
+<meta name="description" content="Kinzhal Nest is the private dashboard Kinzhal LTD Co. uses to monitor its own mobile games: players, retention, ad revenue, purchases and crashes.">
+<link rel="icon" href="/favicon.ico?v=4">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4">
+<meta property="og:title" content="Kinzhal Nest">
+<meta property="og:description" content="Private games HQ for Kinzhal LTD Co.">
+<meta property="og:image" content="https://kinzhalnest.netlify.app/og-image.jpg">
+<style>
+:root{--bg:#07060c;--panel:#120e1f;--line:#272040;--ink:#f2eeff;--ink2:#b4acd4;--pink:#ff2bd6;--cyan:#27e2ff}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#ff2bd61f,transparent 60%),radial-gradient(1000px 600px at 90% 0%,#27e2ff1a,transparent 60%),var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"IBM Plex Sans Arabic",sans-serif}
+main{max-width:980px;margin:0 auto;padding:28px 16px 56px}
+header{display:flex;align-items:center;gap:14px;justify-content:space-between;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.12em}
+.brand img{width:44px;height:44px;border-radius:10px;box-shadow:0 0 18px #ff2bd666}
+.btn{display:inline-block;padding:10px 18px;border-radius:999px;border:1px solid var(--pink);color:var(--ink);text-decoration:none;font-weight:700;box-shadow:0 0 16px #ff2bd655}
+.btn:hover{background:#ff2bd622}
+.hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:center;margin:40px 0}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.1;margin:0 0 12px;background:linear-gradient(90deg,var(--pink),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--ink2);margin:0 0 18px}
+.hero img{width:100%;border-radius:22px;border:1px solid var(--line);box-shadow:0 0 40px #ff2bd633,0 0 60px #27e2ff22}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+.card h3{margin:0 0 6px;font-size:16px;color:var(--cyan)}
+.card p{margin:0;color:var(--ink2);font-size:14.5px}
+h2{font-size:20px;margin:36px 0 12px}
+.ar{direction:rtl;text-align:right}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink2);font-size:14px;display:flex;gap:16px;flex-wrap:wrap}
+footer a{color:var(--cyan)}
+@media (max-width:700px){.hero{grid-template-columns:minmax(0,1fr)}.hero img{max-width:360px;margin:0 auto}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand"><img src="/icon-512.png?v=4" alt="Kinzhal LTD Co. logo">KINZHAL NEST</div>
+  <a class="btn" href="/">Team sign-in</a>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>The games HQ of Kinzhal LTD Co.</h1>
+    <p>Kinzhal Nest is a private, invite-only dashboard that Kinzhal LTD Co. uses to monitor and run its own mobile games. It brings each game's daily numbers into one place so the team can plan updates, marketing and releases.</p>
+    <p>It is an internal tool for the company's own team. It is not offered to the public and does not collect data from players.</p>
+    <a class="btn" href="/privacy.html">Privacy policy</a>
+  </div>
+  <img src="/og-image.jpg" alt="Kinzhal LTD Co. neon eagle logo">
+</section>
+
+<h2>What it does</h2>
+<div class="grid">
+  <div class="card"><h3>Game performance</h3><p>Daily players, installs and retention for each game, read from Google Analytics for Firebase.</p></div>
+  <div class="card"><h3>Revenue</h3><p>Ad revenue from AdMob, plus sales and subscriptions from App Store Connect and RevenueCat.</p></div>
+  <div class="card"><h3>Stability</h3><p>Crash-free users from Firebase Crashlytics, so problems are fixed quickly.</p></div>
+  <div class="card"><h3>Planning</h3><p>Tasks, release plans, costs and reports for the team, exported as PDF.</p></div>
+</div>
+
+<h2>How Google data is used</h2>
+<div class="card">
+  <p>When the owner signs in with Google, Kinzhal Nest asks for <b>read-only</b> access to the company's own Google Analytics, AdMob, Firebase and BigQuery reports. The data is used only to show aggregated game metrics to invited team members. It is never sold, shared or used for advertising. Keys and tokens are encrypted and stored in the company's own Google Cloud project. Use of information received from Google APIs follows the <a style="color:var(--cyan)" href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+</div>
+
+<h2 class="ar">نبذة بالعربية</h2>
+<div class="card ar">
+  <p>كينجال نست لوحة تحكم خاصة بالدعوة فقط، تستخدمها شركة كينجال المحدودة لمتابعة وإدارة ألعابها على الجوال: اللاعبون والاحتفاظ وإيرادات الإعلانات والمشتريات والأعطال، في مكان واحد. الوصول لبيانات Google للقراءة فقط، ولا تُباع البيانات ولا تُشارك ولا تُستخدم للإعلان. <a style="color:var(--cyan)" href="/privacy.html">سياسة الخصوصية</a></p>
+</div>
+
+<footer>
+  <span>© 2026 Kinzhal LTD Co.</span>
+  <a href="/privacy.html">Privacy policy</a>
+  <a href="mailto:it@kinbss.org">it@kinbss.org</a>
+  <a href="/">Team sign-in</a>
+</footer>
+</main>
+</body>
+</html>
